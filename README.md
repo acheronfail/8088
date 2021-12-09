@@ -81,6 +81,9 @@ Other operators that don't map:
 * `in`: read port
 * `push`: push value to stack
 * `pop`: pop value from stack
+* `cld`: clear direction flag
+* `stosb`: write value of `ax` at beginning of `es:di`, increment `di` by one if direction flag unset, or decrement it by 1 if set
+* `stosw`: write value of `ax` at beginning of `es:di`, increment `di` by 2 if direction flag is unset, or decrement it by 2 if set
 
 Jump/conditional instructions:
 
@@ -110,3 +113,25 @@ Jump/conditional instructions:
 * General use
   * `jcxz d8`: Jump if CX is zero
   * `loop d8`: Decrement CX and jump if non-zero
+
+Colours:
+
+* first 4 bits are bg, last four are fg
+  * eg: `0xff` = bg: light white, fg: light white
+  * eg: `0x1a` = bg: blue, fg: light green
+* `0`: black
+* `1`: blue
+* `2`: green
+* `3`: aqua
+* `4`: red
+* `5`: purple
+* `6`: yellow
+* `7`: white
+* `8`: light black (grey)
+* `9`: light blue
+* `a`: light green
+* `b`: light aqua
+* `c`: light red
+* `d`: light purple
+* `e`: light yellow
+* `f`: light white (bright white)
