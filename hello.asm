@@ -1,6 +1,6 @@
   org 0x0100
 
-  mov ax, 0x0002  ; setup text 80x20 mode color
+  mov ax, 0x0002  ; setup text 80x25 mode color
   int 0x10        ; call bios
 
   mov ax, 0xb800  ; segment for video data
